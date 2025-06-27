@@ -7,5 +7,5 @@ public interface LoginRepositories extends JpaRepository <Login, Long> {
     //Ese repositorio permite realizar operaciones CRUD sobre la entidad Login
     
     // Método para encontrar un Login por nombre de usuario y contraseña
-    Login findByNombreLoginAndPassword (String usuarioLogin, String passwordLogin);
+    Login findByUsuarioLoginAndPasswordLogin (String usuarioLogin, String passwordLogin);
 } 
