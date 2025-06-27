@@ -30,24 +30,24 @@ public class PlanControllers {
     @GetMapping("/{planID}")
     public Plan getPlanById (@PathVariable Long planID) {
         return planRepositories.findById(planID).orElse(null);
-    }
+    };
 
     //Crear plan
     @PostMapping
     public Plan CreatePlan (@RequestBody Plan plan) {
         return planRepositories.save(plan);
-    }
+    };
 
     //Actualizar plan
     @PutMapping("/{planID}")
     public Plan updatePlan (@PathVariable Long planID, @RequestBody Plan plan) {
         plan.setPlanID(planID);
         return planRepositories.save(plan);
-    }
+    };
 
     //Eliminar plan
     @DeleteMapping("/{planID}")
     public void deletePlan (@PathVariable Long planID) {
         planRepositories.deleteById(planID);
-    }
+    };
 }

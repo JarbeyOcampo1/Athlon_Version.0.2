@@ -30,24 +30,24 @@ public class ClienteControllers {
     @GetMapping("/{clienteID}")
     public Cliente getClienteById (@PathVariable Long clienteID) {
         return clienteRepositories.findById(clienteID).orElse(null);
-    }
+    };
 
     //Crear cliente
     @PostMapping
     public Cliente createCliente (@RequestBody Cliente cliente) {
         return clienteRepositories.save(cliente);
-    }
+    };
 
     //Actualizar cliente
     @PutMapping("/{clienteID}")
     public Cliente updateCliente (@PathVariable Long clienteID, @RequestBody Cliente cliente) {
         cliente.setClienteID(clienteID);
         return clienteRepositories.save(cliente);
-    }
+    };
 
     //Eliminar cliente
     @DeleteMapping("/{clienteID}")
     public void deleteCliente (@PathVariable Long clienteID) {
         clienteRepositories.deleteById(clienteID);
-    }
+    };
 }
