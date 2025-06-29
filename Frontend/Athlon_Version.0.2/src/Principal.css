@@ -1,0 +1,191 @@
+/* Estilo global para el body */
+body {
+    background-color: gray;
+    background-image: url("./components/Images/fondo2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+    margin: 0;
+    padding: 0;
+    backdrop-filter: blur(3px);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* Contenedor del encabezado */
+.Container_Principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 2vw;
+    background-color: #cf911d;
+}
+
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+/* Estilos para los enlaces de navegación y botones tipo Link */
+.navbar a, 
+.navbar Link {
+    text-decoration: none; 
+    color: white;
+    font-size: 1.6vw; 
+    font-weight: bold;
+    transition: color 0.3s;
+    
+}
+
+/* Efecto hover para los enlaces */
+.navbar a:hover, 
+.navbar Link:hover {
+    color: black;
+}
+
+/* Contenedor del logo */
+.logo-container {
+    width: 60px;
+    height: 50px;
+    margin-right: 0;
+}
+
+/* Carrusel de imágenes */
+.carrousel {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 65vh;
+    scroll-snap-type: mandatory;
+}
+
+/* Estilo para todas las imágenes */
+img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+}
+
+/* Cada imagen en el carrusel se alinea al centro al hacer scroll */
+.carrousel >div {
+    scroll-snap-align: center;
+    min-width: 300px;
+    margin: 10px;
+   
+}
+
+/* Animación para el título letra por letra */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contenedor del título */
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 5%;
+    color: #000;
+}
+
+/* Estilo del texto principal del título */
+.title {
+    justify-content: center; 
+    position: relative;
+    font-size: 2rem;
+    font-weight: bold;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+/* Cada letra del título tiene su animación */
+.title span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+   
+}
+
+/* Aplica la animación con un retraso progresivo para cada letra */
+.title span:nth-child(1) { animation-delay: 0s; }
+.title span:nth-child(2) { animation-delay: 0.1s; }
+.title span:nth-child(3) { animation-delay: 0.2s; }
+.title span:nth-child(4) { animation-delay: 0.3s; }
+.title span:nth-child(5) { animation-delay: 0.4s; }
+.title span:nth-child(6) { animation-delay: 0.5s; }
+.title span:nth-child(7) { animation-delay: 0.6s; }
+.title span:nth-child(8) { animation-delay: 0.7s; }
+.title span:nth-child(9) { animation-delay: 0.8s; }
+.title span:nth-child(10) { animation-delay: 0.9s; }
+.title span:nth-child(11) { animation-delay: 1s; }
+.title span:nth-child(12) { animation-delay: 1.1s; }
+.title span:nth-child(13) { animation-delay: 1.2s; }
+.title span:nth-child(14) { animation-delay: 1.3s; }
+
+/* Estilo del pie de página */
+.footer {
+    background-color: #222; 
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 30px;
+}
+
+/* Contenedor de los íconos de redes */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    
+}
+
+/* Estilo base de los íconos de redes */
+.social-icons a {
+    color: white;
+    font-size: 1.8rem; 
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse sobre los íconos */
+.social-icons a:hover {
+    transform: scale(1.2); 
+    color: #cf911d;
+}
+
+/* Estilo común para enlaces y el botón de cerrar sesión */
+.navbar a,
+.logout-button {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6vw;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-family: inherit;
+}
+
+/* Hover para botón de cerrar sesión y enlaces */
+.navbar a:hover,
+.logout-button:hover {
+    transform: scale(1.2);
+    color: #222;
+}
