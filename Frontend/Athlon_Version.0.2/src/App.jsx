@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.css'
 import Principal from './Principal'
 import Factura from './components/ComponentsFactura/Factura'
 import Cliente from './components/ComponentsCliente/Cliente'
 import Plan from './components/ComponentsPlan/Plan'
+import Logins from './components/ComponentsLogin/Logins'
+import InicioSesionForm from './components/ComponentsLogin/InicioSesionForm'
 
 function App() {
 
@@ -13,7 +14,9 @@ function App() {
     // Se definen las rutas y los componentes que se renderizarán para cada una
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Principal/>}/>
+        <Route path='/' element={<InicioSesionForm/>}/>
+        <Route path='/Logins' element={<Logins/>}/>
+        <Route path='/Principal' element={<Principal/>}/>
         <Route path='/Factura' element={<Factura/>}/>
         <Route path='/Cliente' element={<Cliente/>}/>
         <Route path='/Plan' element={<Plan/>}/>

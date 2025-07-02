@@ -48,7 +48,7 @@ public class LoginControllers {
     };
 
     //eliminar login
-    @DeleteMapping("/{lgoinID}")
+    @DeleteMapping("/{loginID}")
     public void deleteLogin (@PathVariable Long loginID) {
         loginRepositories.deleteById(loginID);
     };

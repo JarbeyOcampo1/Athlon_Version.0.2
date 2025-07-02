@@ -46,7 +46,22 @@ function Principal () {
             <div className="carrousel">
                 <div><img src={imagen1} alt="imagen1" /></div>
                 <div><img src={imagen2} alt="imagen2" /></div>
-                <div><img src={imagen3} alt="imagen3" /></div>    
+                <div><img src={imagen3} alt="imagen3" /></div>
+                <div><img src={imagen1} alt="imagen1" /></div>
+                <div><img src={imagen2} alt="imagen2" /></div>
+                <div><img src={imagen3} alt="imagen3" /></div> 
+                <div><img src={imagen1} alt="imagen1" /></div>
+                <div><img src={imagen2} alt="imagen2" /></div>
+                <div><img src={imagen3} alt="imagen3" /></div> 
+                <div><img src={imagen1} alt="imagen1" /></div>
+                <div><img src={imagen2} alt="imagen2" /></div>
+                <div><img src={imagen3} alt="imagen3" /></div> 
+                <div><img src={imagen1} alt="imagen1" /></div>
+                <div><img src={imagen2} alt="imagen2" /></div>
+                <div><img src={imagen3} alt="imagen3" /></div>
+                <div><img src={imagen1} alt="imagen1" /></div>
+                <div><img src={imagen2} alt="imagen2" /></div>
+                <div><img src={imagen3} alt="imagen3" /></div>     
             </div>
             <footer className="footer">
                 <h2>Síguenos en nuestras redes sociales:</h2>
