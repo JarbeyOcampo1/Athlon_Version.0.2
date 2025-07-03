@@ -9,8 +9,11 @@ import imagen3 from './components/Images/imagen3.jpg';
 import './Principal.css';
 
 function Principal () {
+
+    // Inicializamos la función de navegación
     const navigate = useNavigate();
 
+    // Verifica si el token de autenticación existe en el almacenamiento local
     useEffect(() => {
         const autenticar = localStorage.getItem("Exito");
         if (!autenticar) {
@@ -18,6 +21,7 @@ function Principal () {
         }
     }, [navigate]);
 
+    // Función para cerrar sesión
     const handleLogout = () => {
         localStorage.removeItem("Exito");
         navigate("/");
@@ -29,6 +33,7 @@ function Principal () {
                 <div className="logo-container">
                     <img src={logo} className="principal-logo-image" alt="Logo Gimnasio Athlon" />
                 </div>
+                {/* Barra de navegación con el botón de salir */}
                 <nav className="navbar">
                     <Link to="/Cliente">Clientes</Link>
                     <Link to="/Plan">Planes</Link>
@@ -36,6 +41,7 @@ function Principal () {
                     <button onClick={handleLogout} className="logout-button">Salir</button>
                 </nav>
             </div>
+            {/* Contenedor del título con animación */}
             <div className="title-container">
                 <h1 className="title">
                     <span>G</span><span>I</span><span>M</span><span>N</span><span>A</span><span>S</span><span>I</span><span>O</span>
@@ -43,6 +49,7 @@ function Principal () {
                     <span>A</span><span>T</span><span>H</span><span>L</span><span>O</span><span>N</span>
                 </h1>
             </div>
+            {/* Carrusel de imágenes (simulado con scroll horizontal) */}
             <div className="carrousel">
                 <div><img src={imagen1} alt="imagen1" /></div>
                 <div><img src={imagen2} alt="imagen2" /></div>
@@ -63,6 +70,7 @@ function Principal () {
                 <div><img src={imagen2} alt="imagen2" /></div>
                 <div><img src={imagen3} alt="imagen3" /></div>     
             </div>
+            {/* Pie de página con enlaces a redes sociales */}
             <footer className="footer">
                 <h2>Síguenos en nuestras redes sociales:</h2>
                 <div className="social-icons">

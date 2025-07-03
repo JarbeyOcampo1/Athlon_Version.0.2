@@ -22,6 +22,7 @@ public class Cliente {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long clienteID;
 
+    private String cedulaC;
     private String nombreC;
     private String apellidoC;
     private String emailC;
