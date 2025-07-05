@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './ClienteForm.css';
 
 function ClienteForm ({onSubmit, initialCli}) {
 
@@ -60,7 +61,7 @@ function ClienteForm ({onSubmit, initialCli}) {
             </div>
             <div className="cliente-form-group">
                 <label className="cliente-label"> Telefono </label>
-                <input className="cliente-input" type="number" placeholder="Apellidos del cliente" value={apellidoC} onChange={(e) => setApellidoC(e.target.value)} required/>
+                <input className="cliente-input" type="number" placeholder="Apellidos del cliente" value={telefonoC} onChange={(e) => setTelefonoC(e.target.value)} required/>
             </div>
             <div className="cliente-form-group">
                 <label className="cliente-label">Email </label>

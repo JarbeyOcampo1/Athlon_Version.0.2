@@ -1,3 +1,4 @@
+import './ClienteRow.css'; 
 
 const ClienteRow = ({cliente, onEdit, onDelete}) => {
 
@@ -14,6 +15,27 @@ const ClienteRow = ({cliente, onEdit, onDelete}) => {
         // Llama a la función onDelete pasando el ID del propietario
         onDelete(cliente.clienteID);
     };
+
+    // Renderizamos la fila del producto como una fila de tabla (<tr>)
+    return (
+        <tr> 
+            {/* Mostramos cada propiedad del producto en una celda (<td>) */}
+            <td>{cliente.cedulaC}</td>
+            <td>{cliente.nombreC}</td>
+            <td>{cliente.apellidoC}</td>
+            <td>{cliente.telefonoC}</td>
+            <td>{cliente.emailC}</td>
+            <td>{cliente.fechaRegistro}</td>
+            <td>{cliente.fechaVencimiento}</td>
+            {/* Celda de acciones con botones para editar y eliminar */}
+            <td> 
+                <div className="cliente-actions-row">
+                    <button className="cliente-button-edit" onClick={handleEdit}> Editar </button>
+                    <button className="cliente-button-delete" onClick={handleDelete}> Eliminar </button>
+                </div>
+            </td>
+        </tr>
+    );
 };
 
 export default ClienteRow;

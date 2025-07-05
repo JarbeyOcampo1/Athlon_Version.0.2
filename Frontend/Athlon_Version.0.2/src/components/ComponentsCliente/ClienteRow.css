@@ -1,0 +1,39 @@
+.cliente-actions-row {
+    display: flex;
+    gap: 10px;
+}
+
+/* Botón de editar */
+.cliente-button-edit {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    justify-content: left;
+}
+
+.cliente-button-edit:hover {
+    background-color: #2980b9;
+}
+
+/* Botón de eliminar */
+.cliente-button-delete {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.cliente-button-delete:hover {
+    background-color: #c0392b;
+}
