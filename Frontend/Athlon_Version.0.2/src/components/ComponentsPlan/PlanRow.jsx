@@ -1,3 +1,4 @@
+import './PlanRow.css';
 
 const PlanRow = ({plan, onEdit, onDelete}) => {
 

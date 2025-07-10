@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './PlanForm.css';
 
 function PlanForm ({onSubmit, initialPla}) {
 
@@ -42,7 +43,7 @@ function PlanForm ({onSubmit, initialPla}) {
             </div>
             <div className="plan-form-group">
                 <label className="plan-label"> Duracion </label>
-                <input className="plan-input" type="number" value={duracion} onChange={(e) => setDuracion(e.target.value)} required/>
+                <input className="plan-input" type="text" value={duracion} onChange={(e) => setDuracion(e.target.value)} required/>
             </div>
             <div className="plan-form-group">
                 <label className="plan-label"> Descipcion </label>

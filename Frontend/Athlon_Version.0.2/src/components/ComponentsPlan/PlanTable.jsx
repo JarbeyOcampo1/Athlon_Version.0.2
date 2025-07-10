@@ -1,4 +1,5 @@
 import PlanRow from './PlanRow';
+import './PlanTable.css';
 
 function PlanTable ({planes, onEdit, onDelete}) {
 
