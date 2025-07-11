@@ -16,7 +16,7 @@ const ClienteRow = ({cliente, onEdit, onDelete}) => {
         onDelete(cliente.clienteID);
     };
 
-    // Renderizamos la fila del producto como una fila de tabla (<tr>)
+    // Renderizamos la fila del cliente como una fila de tabla (<tr>)
     return (
         <tr> 
             {/* Mostramos cada propiedad del producto en una celda (<td>) */}
