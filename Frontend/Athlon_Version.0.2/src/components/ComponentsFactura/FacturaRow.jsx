@@ -21,9 +21,11 @@ const FacturaRow = ({factura, onEdit, onDelete}) => {
         <tr>
             {/* Mostramos cada propiedad de la factura en una celda (<td>) */}
             <td>{factura.fechaFactura}</td>
-            <td>{factura.FechaVencimiento}</td>
+            <td>{factura.fechaVencimiento}</td>
             <td>{factura.totalFactura}</td>
-            <td>{factura.clienteID?.nombreC || 'N/A'}</td>
+            <td>{factura.cliente?.nombreC || 'N/A'}</td>
+            <td>{factura.plan?.nombrePlan || 'N/A'}</td>
+
             <td>
                 {/* Celda de acciones con botones para editar y eliminar */}
                 <div className="factura-actions-row">

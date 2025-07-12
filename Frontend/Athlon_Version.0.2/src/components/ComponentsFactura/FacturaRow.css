@@ -1,0 +1,39 @@
+.factura-actions-row {
+    display: flex;
+    gap: 10px;
+}
+
+/* Botón de editar */
+.factura-button-edit {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    justify-content: left;
+}
+
+.factura-button-edit:hover {
+    background-color: #2980b9;
+}
+
+/* Botón de eliminar */
+.factura-button-delete {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.factura-button-delete:hover {
+    background-color: #c0392b;
+}

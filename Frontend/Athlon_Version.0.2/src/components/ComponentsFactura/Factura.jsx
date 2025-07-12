@@ -32,11 +32,11 @@ function Factura () {
 
      // Actualiza la lista de facturas cada vez que se crea uno nuevo
     useEffect (() => {
-        fetchFactura
+        fetchFactura();
     },[]);
 
     // Recorre la lista de facturas y retorna una respuesta
-    const fecthFactura = async () => {
+    const fetchFactura = async () => {
         try {
             const response = await axios.get('http://localhost:8080/api/facturas');
             setFactura(response.data);
@@ -52,7 +52,7 @@ function Factura () {
                 await axios.put(`http://localhost:8080/api/facturas/${editingFactura.facturaID}`, facturaData);
             }else {
                 await axios.post('http://localhost:8080/api/facturas', facturaData);
-                await fecthFactura();
+                await fetchFactura();
             }
         } catch (error) {
             console.log('Error al crear una factura' ,error);
@@ -68,7 +68,7 @@ function Factura () {
     const handleDeleteFactura = async (facturaID) => {
         try {
             await axios.delete(`http://localhost:8080/api/facturas/${facturaID}`)
-            await fecthFactura();
+            await fetchFactura();
         } catch (error) {
             alert('Error al eliminar una factura');
         }

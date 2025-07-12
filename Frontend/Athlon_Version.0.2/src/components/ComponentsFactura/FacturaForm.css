@@ -1,0 +1,86 @@
+/* Contenedor del formulario, centrado con ancho máximo, fondo claro, bordes redondeados y sombra */
+.factura-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Grupo de elementos del formulario con separación y organizados en columna */
+.factura-form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Etiqueta del formulario en negrita y con margen inferior para separación */
+.factura-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #000000;
+}
+
+/* Campo de entrada con padding, borde verde inicial, bordes redondeados y transición suave */
+.factura-input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    border-color: #cf911d;
+}
+
+/* Estilo para el campo de entrada cuando está enfocado: borde azul y sombra */
+.factura-input:focus {
+    border-color: #222;
+    box-shadow: 0 0 0 3px #cf911d;
+    outline: none;
+}
+
+/* Estilo para el select similar al input */
+.factura-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    border-color: #cf911d;
+    background-color: white;
+    color: #474545;
+    appearance: none; 
+}
+
+/* Estilo para el campo de entrada cuando está enfocado: borde azul y sombra */
+.factura-select:focus {
+    border-color: #cf911d;
+    box-shadow: 0 0 0 3px #cf911d;
+    outline: none;
+}
+
+/* Estilo para cada opción dentro del select */
+.factura-select-option {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    background-color: white;
+    color: #000000;
+}
+
+/* Botón con fondo oscuro, texto blanco, padding, bordes redondeados y cursor pointer */
+.factura-button {
+    background-color: #cf911d;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+/* Cambio de color del botón al pasar el mouse para efecto hover */
+.factura-button:hover {
+    background-color: #222;
+}
