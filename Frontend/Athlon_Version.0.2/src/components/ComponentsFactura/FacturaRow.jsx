@@ -1,3 +1,4 @@
+import FacturaIndividualPDF from './FacturaIndividualPDF';
 import './FacturaRow.css';
 
 const FacturaRow = ({factura, onEdit, onDelete}) => {
@@ -31,6 +32,7 @@ const FacturaRow = ({factura, onEdit, onDelete}) => {
                 <div className="factura-actions-row">
                     <button className="factura-button-edit" onClick={handleEdit}> Editar </button>
                     <button className="factura-button-delete" onClick={handleDelete}> Eliminar </button>
+                    <FacturaIndividualPDF factura={factura}/>
                 </div>
             </td>
         </tr>

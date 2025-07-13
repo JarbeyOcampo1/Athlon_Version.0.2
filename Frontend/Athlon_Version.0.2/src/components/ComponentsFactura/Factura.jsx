@@ -6,6 +6,7 @@ import axios from "axios";
 import FacturaTable from "./FacturaTable";
 import FacturaForm from "./FacturaForm";
 import './Factura.css';
+import FacturaPDF from "./FacturaPDF";
 
 function Factura () {
 
@@ -90,6 +91,7 @@ function Factura () {
             </div>
             <div className="factura-contianer-principal">
                 <h1 className="factura-h1-title"> Facturas </h1>
+                <FacturaPDF facturas={factura}/>
                 <FacturaTable facturas={factura} onEdit={handleEditingFactura} onDelete={handleDeleteFactura}/>
                 <h2 className="facturas-h2-edit-create">{editingFactura ? 'Editar Factura':'Crear Factura'}</h2>
                 <FacturaForm onSubmit={createOrUpdateFactura} initialFac={editingFactura}/>
