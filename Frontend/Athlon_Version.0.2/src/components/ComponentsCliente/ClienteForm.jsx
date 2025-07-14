@@ -72,8 +72,8 @@ function ClienteForm ({onSubmit, initialCli}) {
                 <input className="cliente-input" type="date"  value={fechaRegistro} onChange={(e) => setFechaRegistro(e.target.value)} required/>
             </div>
             <div className="cliente-form-group">
-                <label className="cliente-label"> Fecha Vencimiento </label>
-                <input className="cliente-input" type="date"  value={fechaVencimiento} onChange={(e) => setFechaVencimiento(e.target.value)} required/>
+                <label className="cliente-label"> Fecha Cancelación </label>
+                <input className="cliente-input" type="date"  value={fechaVencimiento} onChange={(e) => setFechaVencimiento(e.target.value)}/>
             </div>
             {/* Botón de envío que cambia su texto dependiendo si estamos en modo edición o creación */}
             <div className="cliente-form-group">

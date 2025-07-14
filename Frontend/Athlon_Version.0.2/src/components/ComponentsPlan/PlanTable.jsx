@@ -11,7 +11,7 @@ function PlanTable ({planes, onEdit, onDelete}) {
                 <thead className="plan-table-header">
                     <tr className="plan-table-row">
                         <th className="plan-th"> Nombre </th>
-                        <th className="plan-th"> Duracion </th>
+                        <th className="plan-th"> Duración </th>
                         <th className="plan-th"> Descripcion </th>
                         <th className="plan-th"> Precio </th>
                         <th className="plan-th"> Acciones </th>

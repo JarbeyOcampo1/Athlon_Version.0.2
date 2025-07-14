@@ -16,7 +16,7 @@ function ClienteTable ({clientes, onEdit, onDelete}) {
                         <th className="cliente-th"> Telefono </th>
                         <th className="cliente-th"> Email </th>
                         <th className="cliente-th"> Fecha Registro </th>
-                        <th className="cliente-th"> Fecha Vencimiento </th>
+                        <th className="cliente-th"> Fecha Cancelación </th>
                         <th className="cliente-th"> Acciones </th>
                     </tr>
                 </thead>

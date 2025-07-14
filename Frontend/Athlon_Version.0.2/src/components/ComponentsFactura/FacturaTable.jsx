@@ -10,6 +10,7 @@ function FacturaTable({ facturas, onEdit, onDelete }) {
             <th className="factura-th">Fecha Factura</th>
             <th className="factura-th">Fecha Vencimiento</th>
             <th className="factura-th">Total Factura</th>
+            <th className="factura-th">Cedula</th>
             <th className="factura-th">Cliente</th>
             <th className="factura-th">Plan</th>
             <th className="factura-th">Acciones</th>

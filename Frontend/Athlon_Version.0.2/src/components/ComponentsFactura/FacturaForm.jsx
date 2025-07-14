@@ -93,7 +93,15 @@ function FacturaForm({ onSubmit, initialFac }) {
       </div>
       <div className="factura-form-group">
         <label className="factura-label">Planes</label>
-        <select className="factura-select" value={planID} onChange={(e) => setPlanID(e.target.value)} required>
+        <select className="factura-select" value={planID} onChange={(e) => {const selectdPlanId = e.target.value;
+          setPlanID(selectdPlanId);
+          const selectdPlan = planes.find(plan => plan.planID === Number(selectdPlanId));
+          if (selectdPlan) {
+            setTotalFactura(String(selectdPlan.precio));
+          } else {
+            setTotalFactura('');
+          };
+        }} required>
           <option value="">Selecciona un plan</option>
           {planes.map((plan) => (
             <option key={plan.planID} value={plan.planID}>

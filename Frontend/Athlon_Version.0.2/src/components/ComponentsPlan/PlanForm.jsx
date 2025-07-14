@@ -39,10 +39,15 @@ function PlanForm ({onSubmit, initialPla}) {
             {/* Campos controlados de los productos */}
             <div className="plan-form-group">
                 <label className="plan-label"> Nombre </label>
-                <input className="plan-input" type="text" placeholder="Nombre de plan" value={nombrePlan} onChange={(e) => setNombrePlan(e.target.value)} required/>
+                <select className="plan-select" value={nombrePlan} onChange={(e) => setNombrePlan(e.target.value)} required>
+                    <option className="plan-select-option" value=""> Seleccionar </option>
+                    <option className="plan-select-option" value="Oro"> Oro </option>
+                    <option className="plan-select-option" value="Plata"> Plata </option>
+                    <option className="plan-select-option" value="Hierro"> Hierro </option>
+                </select>
             </div>
             <div className="plan-form-group">
-                <label className="plan-label"> Duracion </label>
+                <label className="plan-label"> Duración </label>
                 <input className="plan-input" type="text" value={duracion} onChange={(e) => setDuracion(e.target.value)} required/>
             </div>
             <div className="plan-form-group">

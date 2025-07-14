@@ -27,6 +27,7 @@ function FacturaPDF ({facturas}) {
             {header: "Fecha Factura", dataKey: "fechaFactura"},
             {header: "Fecha Vencimiento", dataKey: "fechaVencimiento"},
             {header: "Total", dataKey: "totalFactura"},
+            {header: "Cedula", dataKey: "cedula"},
             {header: "Cliente", dataKey: "cliente"},
             {header: "Plan", dataKey: "plan"},
         ];
@@ -36,6 +37,7 @@ function FacturaPDF ({facturas}) {
             fechaFactura: fac.fechaFactura,
             fechaVencimiento: fac.fechaVencimiento,
             totalFactura: `$${fac.totalFactura}`,
+            cedula: `${fac.cliente?.cedulaC || 'N/A'}`,
             cliente: `${fac.cliente?.nombreC || 'N/A'} ${fac.cliente?.apellidoC || 'N/A'}`,
             plan: `${fac.plan?.nombrePlan || 'N/A'}`,
         }));

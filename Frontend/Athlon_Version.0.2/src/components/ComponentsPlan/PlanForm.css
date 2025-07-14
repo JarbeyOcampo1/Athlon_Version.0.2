@@ -56,3 +56,31 @@
 .plan-button:hover {
     background-color: #222;
 }
+
+/* Estilo para el select similar al input */
+.plan-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    border-color: #cf911d;
+    background-color: white;
+    color: #474545;
+    appearance: none;    
+}
+
+/* Estilo para el campo de entrada cuando está enfocado: borde azul y sombra */
+.plan-select:focus {
+    border-color: #222;
+    box-shadow: 0 0 0 3px #cf911d;
+    outline: none;
+}
+
+/* Estilo para cada opción dentro del select */
+.plan-select-option {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    background-color: white;
+    color: #000000;
+}

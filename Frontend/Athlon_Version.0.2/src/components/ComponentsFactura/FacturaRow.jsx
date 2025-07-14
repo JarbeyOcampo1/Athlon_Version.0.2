@@ -24,6 +24,7 @@ const FacturaRow = ({factura, onEdit, onDelete}) => {
             <td>{factura.fechaFactura}</td>
             <td>{factura.fechaVencimiento}</td>
             <td>{factura.totalFactura}</td>
+            <td>{factura.cliente?.cedulaC || 'N/A'}</td>
             <td>{factura.cliente?.nombreC || 'N/A'}</td>
             <td>{factura.plan?.nombrePlan || 'N/A'}</td>
 
