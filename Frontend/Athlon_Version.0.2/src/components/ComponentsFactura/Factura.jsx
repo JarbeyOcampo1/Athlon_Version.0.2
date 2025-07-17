@@ -7,6 +7,9 @@ import FacturaTable from "./FacturaTable";
 import FacturaForm from "./FacturaForm";
 import './Factura.css';
 import FacturaPDF from "./FacturaPDF";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useRef } from "react";
 
 function Factura () {
 
@@ -30,6 +33,7 @@ function Factura () {
     // Crear un estado para almacenar las facturas
     const [factura, setFactura] = useState([]);
     const [editingFactura, setEditingFactura] = useState(null);
+    const notificadasRef = useRef(new Set());
 
      // Actualiza la lista de facturas cada vez que se crea uno nuevo
     useEffect (() => {
@@ -41,6 +45,23 @@ function Factura () {
         try {
             const response = await axios.get('http://localhost:8080/api/facturas');
             setFactura(response.data);
+
+            // Notificaciones de vencimiento
+            const hoy = new Date();
+            response.data.forEach( fac => {
+                if (!fac.fechaVencimiento || !fac.facturaID) return;
+
+                const vencimiento = new Date(fac.fechaVencimiento);
+                const diasRestantes = Math.ceil((vencimiento - hoy) / (1000 * 60 * 60 * 24));
+
+                if (diasRestantes <= 3 && diasRestantes >= 0 && !notificadasRef.current.has(fac.facturaID)) {
+                    notificadasRef.current.add(fac.facturaID);
+                    toast.warning(`⚠️ La factura de cliente ${fac.cliente?.nombreC || 'N/A'} con cedula ${fac.cliente?.cedulaC || 'N/A'} vence en ${diasRestantes} dia(s).`);
+                } else if (diasRestantes < 0 && !notificadasRef.current.has(fac.facturaID)) {
+                    toast.error(`❌ La factura de cliente ${fac.cliente?.nombreC || 'N/A'} con cédula ${fac.cliente?.cedulaC || 'N/A'} ya está vencida.`);
+                    notificadasRef.current.add(fac.facturaID);
+                }
+            });
         } catch (error) {
             console.log('Error a cargar los datos', error);
         }
@@ -96,6 +117,7 @@ function Factura () {
                 <h2 className="facturas-h2-edit-create">{editingFactura ? 'Editar Factura':'Crear Factura'}</h2>
                 <FacturaForm onSubmit={createOrUpdateFactura} initialFac={editingFactura}/>
             </div>
+            <ToastContainer position="top-right" autoClose={5000}/>
         </div>
     );
 }
