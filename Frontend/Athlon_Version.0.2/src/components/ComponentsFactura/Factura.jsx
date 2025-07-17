@@ -100,7 +100,7 @@ function Factura () {
         <div>
             <div className="Container_Principal">
                 <div className="logo-container">
-                    <img src={logo} className="principal-logo-image" alt="Logo Gimnasio Athlon" />
+                    <Link to="/Principal"><img src={logo} className="principal-logo-image" alt="Logo Gimnasio Athlon" /></Link>
                 </div>
                  {/* Barra de navegación con el botón de salir */}
                 <nav className="navbar">
