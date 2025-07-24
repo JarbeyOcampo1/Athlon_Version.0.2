@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import closeSession from "../../closeSession";
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
@@ -9,22 +9,8 @@ import './Plan.css';
 
 function Plan () {
 
-    // Inicializamos la función de navegación
-    const navigate = useNavigate();
-
-    // Verifica si el token de autenticación existe en el almacenamiento local
-    useEffect(() => {
-        const autenticar = localStorage.getItem("Exito");
-        if (!autenticar) {
-            navigate("/");
-        }
-    }, [navigate]);
-
-    // Función para cerrar sesión
-    const handleLogout = () => {
-        localStorage.removeItem("Exito");
-        navigate("/");
-    };
+    // Inicializamos la función de navegación para salir de la sesión
+    const handleLogout = closeSession();
 
     // Crear un estado para almacenar los planes
     const [planes, setPlanes] = useState([]);

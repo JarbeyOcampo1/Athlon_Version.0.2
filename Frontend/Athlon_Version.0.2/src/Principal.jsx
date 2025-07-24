@@ -6,26 +6,13 @@ import logo from './components/Images/logo.png';
 import imagen1 from './components/Images/imagen1.jpg';
 import imagen2 from './components/Images/imagen2.jpg';
 import imagen3 from './components/Images/imagen3.jpg';
+import closeSession from './closeSession';
 import './Principal.css';
 
 function Principal () {
 
-    // Inicializamos la función de navegación
-    const navigate = useNavigate();
-
-    // Verifica si el token de autenticación existe en el almacenamiento local
-    useEffect(() => {
-        const autenticar = localStorage.getItem("Exito");
-        if (!autenticar) {
-            navigate("/");
-        }
-    }, [navigate]);
-
-    // Función para cerrar sesión
-    const handleLogout = () => {
-        localStorage.removeItem("Exito");
-        navigate("/");
-    };
+    // Inicializamos la función de navegación para salir de la sesión
+    const handleLogout = closeSession();
 
     return (
         <div>

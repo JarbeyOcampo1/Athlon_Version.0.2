@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import closeSession from "../../closeSession";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../Images/logo.png";
@@ -13,22 +13,8 @@ import { useRef } from "react";
 
 function Factura () {
 
-     // Inicializamos la función de navegación
-    const navigate = useNavigate();
-
-    // Verifica si el token de autenticación existe en el almacenamiento local
-    useEffect(() => {
-        const autenticar = localStorage.getItem("Exito");
-        if (!autenticar) {
-            navigate("/");
-        }
-    }, [navigate]);
-
-    // Función para cerrar sesión
-    const handleLogout = () => {
-        localStorage.removeItem("Exito");
-        navigate("/");
-    };
+    // Inicializamos la función de navegación para salir de la sesión
+    const handleLogout = closeSession();
 
     // Crear un estado para almacenar las facturas
     const [factura, setFactura] = useState([]);
