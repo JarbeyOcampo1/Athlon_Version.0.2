@@ -42,7 +42,7 @@ function FacturaIndividualPDF ({factura}) {
         doc.text(`Total a pagar: $${factura.totalFactura}`, 20, 145);
         doc.setTextColor(0, 0, 0);
 
-        //pei de pagina
+        //pie de pagina
         doc.setFontSize(10);
         doc.text("Gracias por su compra.", 20, 270);
         doc.text("Gimnasio Athlon - Vive fuerte, Vive sano.", 20, 276);
